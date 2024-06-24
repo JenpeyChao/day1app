@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BookService } from './demolist.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day1app';
-  books = ['a','b','c'];
+  books;
+  constructor(srv : BookService){
+    
+    this.books = srv.getBooks();
+  }
 }

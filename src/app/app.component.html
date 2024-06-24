@@ -1,11 +1,13 @@
 <h1>Project: {{title}}</h1>
 <app-demo></app-demo>
-<li *ngFor="let book of books">
-    {{book}}
-    <div [ngSwitch]="book">
-        <div *ngSwitchCase="'a'">{{book}} for APPLE</div> 
-        <div *ngSwitchCase="'b'">{{book}} for BOY</div> 
-        <div *ngSwitchCase="'c'">{{book}} for COOKIES</div> 
-        <div *ngSwitchDefault>{{book}} has no specific case</div>
-    </div>
-</li>
+
+<Ul>
+    <li *ngFor="let book of books">
+        <div [ngSwitch]="book">
+            <div *ngSwitchCase="'a'">{{book}} for APPLE</div> 
+            <div *ngSwitchCase="'b'">{{book}} for BOY</div> 
+            <div *ngSwitchCase="'c'">{{book}} for COOKIES</div> 
+            <div *ngSwitchDefault>{{book}} has no specific case</div>
+        </div>
+    </li>
+</Ul>
